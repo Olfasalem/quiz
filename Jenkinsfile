@@ -14,7 +14,7 @@ pipeline {
                 }
             }
         }}
-    stage('Build and Dockerize') {
+        stage('Build and Dockerize') {
             steps {
                 // Étape de construction du projet Flutter
                 bat 'flutter pub get'
