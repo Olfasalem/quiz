@@ -3,7 +3,7 @@ pipeline {
     environment {
         DOCKER_PATH = "C:\\Program Files\\Docker\\cli-plugins"
         PATH = "${DOCKER_PATH}:${PATH}"
-        DOCKERHUB_CREDENTIALS = credentials('DockerHub')
+        DOCKERHUB_CREDENTIALS = credentials('olfasalem')
     }
     stages {
         stage('Checkout') {
