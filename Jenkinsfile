@@ -4,7 +4,6 @@ pipeline {
         DOCKER_PATH = "C:\\Program Files\\Docker\\cli-plugins"
         PATH = "${DOCKER_PATH}:${PATH}"
         DOCKERHUB_CREDENTIALS = credentials('DockerHub')
-       
     }
     stages {
         stage('Checkout') {
@@ -13,7 +12,8 @@ pipeline {
                     checkout scm
                 }
             }
-        }}
+        }
+
         stage('Build and Dockerize') {
             steps {
                 // Étape de construction du projet Flutter
@@ -27,4 +27,8 @@ pipeline {
                 }
             }
         }
+    }
+
+    // Ajoutez d'autres directives du pipeline si nécessaire
+    // ...
 }
