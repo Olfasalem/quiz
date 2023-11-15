@@ -3,7 +3,7 @@ pipeline {
 
     environment {
         DOCKER_PATH = "C:\\Program Files\\Docker\\cli-plugins"
-        PATH = "${DOCKER_PATH};C:\src\flutter\flutter_windows_3.7.7-stable\flutter\bin;${PATH}"
+        PATH = "${DOCKER_PATH};C:/src/flutter/flutter_windows_3.7.7-stable/flutter/bin;${PATH}"
         DOCKERHUB_CREDENTIALS = credentials('DockerHub')
     }
 
