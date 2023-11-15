@@ -1,21 +1,20 @@
 pipeline {
     agent any
+
     environment {
         DOCKER_PATH = "C:\\Program Files\\Docker\\cli-plugins"
-        PATH = "${DOCKER_PATH}:${PATH}"
+        PATH = "${DOCKER_PATH};C:\src\flutter\flutter_windows_3.7.7-stable\flutter\bin;${PATH}"
         DOCKERHUB_CREDENTIALS = credentials('DockerHub')
     }
+
     stages {
         stage('Checkout') {
             steps {
                 script {
                     checkout scm
-                       bat 'dart pub get'
-                        bat 'dart build'
                 }
             }
         }
-     
 
         stage('Build and Dockerize') {
             steps {
